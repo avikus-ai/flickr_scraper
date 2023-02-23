@@ -63,3 +63,23 @@ For business inquiries and professional support requests please visit us at http
 ## Contact
 
 **Issues should be raised directly in the repository.** For business inquiries or professional support requests please visit https://www.ultralytics.com or email Glenn Jocher at glenn.jocher@ultralytics.com. 
+
+
+## ERRORS
+
+if you get into trouble with blow problem,
+
+```=========================================================================================================================
+Traceback (most recent call last):
+  File "/Users/cjgetty/Desktop/flickr_scraper/flickr_scraper.py", line 66, in <module>
+    get_urls(search=opt.search,  # search term
+  File "/Users/cjgetty/Desktop/flickr_scraper/flickr_scraper.py", line 31, in get_urls
+    for i, photo in enumerate(photos):
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.9/site-packages/flickrapi/core.py", line 690, in data_walker
+    photoset = rsp.getchildren()[0]
+AttributeError: 'xml.etree.ElementTree.Element' object has no attribute 'getchildren'
+```
+
+It can be fixed by editing the core.py file.
+The file should be inside the following path ```python3.x/site-packages/flickrapi/core.py```
+replace line 690 with ```photoset = list(rsp)[0]```. That should resolve the issue.
