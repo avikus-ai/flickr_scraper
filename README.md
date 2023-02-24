@@ -67,7 +67,7 @@ For business inquiries and professional support requests please visit us at http
 
 ## ERRORS
 
-if you get into trouble with blow problem,
+if you get in trouble with blow problem,
 
 ```=========================================================================================================================
 Traceback (most recent call last):
