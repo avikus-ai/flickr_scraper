@@ -80,6 +80,6 @@ Traceback (most recent call last):
 AttributeError: 'xml.etree.ElementTree.Element' object has no attribute 'getchildren'
 ```
 
-It can be fixed by editing the core.py file.
+It can be fixed by editing the ```core.py``` file.
 The file should be inside the following path ```python3.x/site-packages/flickrapi/core.py```
 replace line 690 with ```photoset = list(rsp)[0]```. That should resolve the issue.
